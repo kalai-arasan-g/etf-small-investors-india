@@ -83,7 +83,7 @@ If you use this code, please cite the paper (see [`CITATION.cff`](CITATION.cff))
 
 ## Use of AI tools
 
-Claude (Anthropic) was used to assist with code development, literature search and drafting. The authors reviewed, verified and edited all code, results and text and take full responsibility for them.
+Claude (Anthropic) was used to assist with code development and drafting. The authors reviewed, verified and edited all code, results and text and take full responsibility for them.
 
 ## Disclaimer
 
