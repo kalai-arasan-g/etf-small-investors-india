@@ -1,0 +1,13 @@
+# downloaded data and new runs are not committed (re-created by the notebook)
+data/
+ETF_SmallInvestor_India/
+results/run_*
+!results/run_20261026_0831/
+latex_tables/
+# python / jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+# OS
+.DS_Store
