@@ -1,0 +1,21 @@
+\begin{table}
+\caption{Random N-stock portfolios versus ETF portfolios (equity-only: Nifty 50 ETF and Equity ETFs 1/N; multi-asset: 1/N ETF), SIP Rs 5,000/month, zero brokerage.}
+\label{tab:T08_stocks_vs_etf}
+\begin{tabular}{llrrrrrrrrrrrrrrrrr}
+\toprule
+ &  & draws & Sharpe p5 & Sharpe median & Sharpe p95 & vol median & MDD median & cash drag (avg cash weight) median & cost \% contrib median & tax \% contrib median & 1/N ETF Sharpe & \% draws below 1/N ETF Sharpe & \% draws with higher vol than 1/N ETF & Nifty 50 ETF Sharpe & \% draws below Nifty 50 ETF Sharpe & Equity ETFs 1/N Sharpe & \% draws below Equity ETFs 1/N Sharpe & \% draws with higher vol than Nifty 50 ETF \\
+mode & N stocks &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+\midrule
+\multirow[t]{4}{*}{frictionless} & 5 & 500 & -0.0039 & 0.3385 & 0.7043 & 0.3245 & -0.5819 & 0.0000 & 0.0000 & 0.0000 & 0.8442 & 98.8000 & 100.0000 & 0.3027 & 43.0000 & 0.3253 & 46.6000 & 100.0000 \\
+ & 10 & 500 & 0.0851 & 0.3483 & 0.6523 & 0.2984 & -0.5644 & 0.0000 & 0.0000 & 0.0000 & 0.8442 & 100.0000 & 100.0000 & 0.3027 & 38.6000 & 0.3253 & 44.8000 & 100.0000 \\
+ & 15 & 500 & 0.1219 & 0.3742 & 0.6015 & 0.2836 & -0.5624 & 0.0000 & 0.0000 & 0.0000 & 0.8442 & 100.0000 & 100.0000 & 0.3027 & 29.6000 & 0.3253 & 35.6000 & 100.0000 \\
+ & 20 & 500 & 0.1626 & 0.3676 & 0.5779 & 0.2771 & -0.5600 & 0.0000 & 0.0000 & 0.0000 & 0.8442 & 100.0000 & 100.0000 & 0.3027 & 29.4000 & 0.3253 & 36.2000 & 100.0000 \\
+\cline{1-19}
+\multirow[t]{4}{*}{costs\_tax} & 5 & 500 & -0.0131 & 0.3314 & 0.6958 & 0.3251 & -0.5822 & 0.0017 & 0.0122 & 0.0752 & 0.8222 & 98.6000 & 100.0000 & 0.3004 & 43.6000 & 0.3233 & 47.6000 & 100.0000 \\
+ & 10 & 500 & 0.0700 & 0.3421 & 0.6475 & 0.2998 & -0.5689 & 0.0025 & 0.0135 & 0.0765 & 0.8222 & 99.8000 & 100.0000 & 0.3004 & 39.2000 & 0.3233 & 45.2000 & 100.0000 \\
+ & 15 & 500 & 0.1086 & 0.3721 & 0.5966 & 0.2854 & -0.5654 & 0.0039 & 0.0147 & 0.0722 & 0.8222 & 100.0000 & 100.0000 & 0.3004 & 30.0000 & 0.3233 & 37.4000 & 100.0000 \\
+ & 20 & 500 & 0.1603 & 0.3632 & 0.5754 & 0.2792 & -0.5651 & 0.0049 & 0.0156 & 0.0689 & 0.8222 & 100.0000 & 100.0000 & 0.3004 & 29.6000 & 0.3233 & 36.4000 & 100.0000 \\
+\cline{1-19}
+\bottomrule
+\end{tabular}
+\end{table}

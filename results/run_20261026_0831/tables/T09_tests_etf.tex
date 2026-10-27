@@ -1,0 +1,23 @@
+\begin{table}
+\caption{Tests of ETF strategies against the Nifty 50 ETF and the 1/N ETF portfolio (net of costs and tax; circular block bootstrap, b=5, M=4999).}
+\label{tab:T09_tests_etf}
+\begin{tabular}{llrrrrr}
+\toprule
+ &  & Sharpe diff (ann.) & Sharpe p (LW2008) & log variance ratio & variance p (LW2011) & Romano-Wolf adj. p (vs 1/N) \\
+benchmark & strategy &  &  &  &  &  \\
+\midrule
+\multirow[t]{5}{*}{Nifty 50 ETF only} & Equity ETFs 1/N & 0.0230 & 0.8152 & 0.1128 & 0.1678 & NaN \\
+ & 1/N ETF & 0.5242 & 0.0450 & -0.9309 & 0.0038 & NaN \\
+ & Min-variance ETF & 0.4834 & 0.1470 & -1.5802 & 0.0002 & NaN \\
+ & Max-Sharpe ETF & 0.3091 & 0.3320 & -0.6314 & 0.0518 & NaN \\
+ & Risk-parity ETF & 0.5257 & 0.0820 & -1.4402 & 0.0004 & NaN \\
+\cline{1-7}
+\multirow[t]{5}{*}{1/N ETF} & Nifty 50 ETF only & -0.5242 & 0.0450 & 0.9309 & 0.0038 & 0.1358 \\
+ & Equity ETFs 1/N & -0.5013 & 0.0348 & 1.0437 & 0.0002 & 0.1232 \\
+ & Min-variance ETF & -0.0408 & 0.8258 & -0.6494 & 0.0002 & 0.9030 \\
+ & Max-Sharpe ETF & -0.2152 & 0.1670 & 0.2995 & 0.0086 & 0.3260 \\
+ & Risk-parity ETF & 0.0015 & 0.9874 & -0.5093 & 0.0002 & 0.9874 \\
+\cline{1-7}
+\bottomrule
+\end{tabular}
+\end{table}

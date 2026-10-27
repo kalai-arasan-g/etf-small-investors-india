@@ -1,0 +1,27 @@
+type,name,caption
+table,T01_etf_selection,"ETFs selected for each asset class (free Yahoo Finance data; liquidity screen on median daily traded value, Rs crore)."
+table,T02_descriptive_stats,"Descriptive statistics of monthly ETF returns, Feb 2015-Sep 2026."
+table,T03_correlations,Correlation matrix of monthly ETF returns.
+figure,F03_correlation_heatmap,Correlation of monthly ETF returns.
+table,T04_stock_universe,Direct-equity universe built from NSE month-end bhavcopies (survivorship-bias free).
+table,T05_tracking_liquidity,"Tracking error (TE1 mean absolute difference, TE2 SD of differences, TE3 regression standard error; annualised, price vs TRI; nav_ prefix = NAV vs TRI), premium/discount to NAV and liquidity."
+figure,F10_tracking_premium,Tracking error and premium/discount of the selected ETFs.
+figure,F04_dcc_correlations,"DCC-GARCH(1,1) correlation of the Nifty 50 ETF with other ETFs (a=0.011, b=0.975)."
+table,T06_weights_diversification,Average target weights and diversification ratio of ETF strategies.
+figure,F09_weights,Target weights of optimised ETF strategies at each rebalance date.
+table,T07_etf_performance_main,"Out-of-sample performance of ETF strategies for the main investors (SIP Rs 5,000/month; Lump Rs 50,000), zero brokerage, 20% slab: frictionless, with costs, and with costs and tax."
+table,T08_stocks_vs_etf,"Random N-stock portfolios versus ETF portfolios (equity-only: Nifty 50 ETF and Equity ETFs 1/N; multi-asset: 1/N ETF), SIP Rs 5,000/month, zero brokerage."
+figure,F05_sharpe_distribution,"Distribution of net Sharpe ratios of random N-stock portfolios against ETF strategies (SIP investor, costs and tax)."
+figure,F01_cumulative_growth,"Growth of Rs 1 (time-weighted, net of costs and tax): ETF strategies vs random 10-stock portfolios."
+table,T15_largecap_universe,"Random N-stock portfolios drawn from the 100 most-traded stocks (large-cap, Nifty 100-like universe) versus equity ETFs, SIP Rs 5,000/month, net of costs and tax. Nifty 50 ETF Sharpe 0.30, vol 16.6%, MDD -28.8%."
+table,T16_risk_decomposition,"Risk decomposition, SIP Rs 5,000/month: cap-weighted Nifty 50 ETF vs equal-weighted whole-universe baskets (systematic difference) vs random N-stock portfolios (adds diversifiable risk). Random portfolios net of costs and tax; universe baskets frictionless."
+table,T09_tests_etf,"Tests of ETF strategies against the Nifty 50 ETF and the 1/N ETF portfolio (net of costs and tax; circular block bootstrap, b=5, M=4999)."
+table,T10_tests_etf_vs_stocks,Ledoit-Wolf Sharpe tests of ETF portfolios against each random N-stock portfolio (net of costs and tax).
+table,T11_erosion_by_investor,"Costs and taxes as % of contributions, cash drag and net performance by investor size and broker: 1/N ETF vs median random 10-stock portfolio (20% slab)."
+figure,F06_cost_tax_erosion,Costs (solid) and taxes (hatched) as % of contributions with Rs 20 flat brokerage: 1/N ETF vs median 10-stock portfolio.
+table,T12_slab_scenarios,"ETF strategies under 5%, 20% and 30% income-tax slabs (slab affects debt ETF gains and short-term gold/international gains)."
+table,T13_subperiods,"Performance by sub-period (main SIP investor, net of costs and tax)."
+table,T14_robustness,"Robustness of ETF results (main SIP investor, net of costs and tax)."
+figure,F02_drawdowns,Drawdowns of ETF strategies (net of costs and tax).
+figure,F08_rolling_sharpe,Rolling 36-month Sharpe ratio of ETF strategies.
+figure,F07_efficient_frontier,"Long-only ETF efficient frontier (full sample, Ledoit-Wolf covariance) with average strategy weights and realised random 10-stock portfolios."

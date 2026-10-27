@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Do Index ETFs Help Small Investors Diversify? Evidence from India with Realistic Costs, Taxes and Whole-Unit Purchases - replication code"
+authors:
+  - family-names: "G"
+    given-names: "Kalaiarasan"
+    email: "kalai.forward@gmail.com"
+    affiliation: "Amrita School of Artificial Intelligence, Amrita Vishwa Vidyapeetham, Coimbatore, India"
+  - family-names: "Shyam"
+    given-names: "A. V."
+    email: "av_shyam@cb.amrita.edu"
+    affiliation: "Amrita School of Business, Amrita Vishwa Vidyapeetham, Coimbatore, India"
+version: "1.0.0"
+date-released: "2026-10-27"
+license: MIT
+repository-code: "https://github.com/kalai-arasan-g/etf-small-investors-india"
+keywords:
+  - exchange-traded funds
+  - portfolio diversification
+  - small investors
+  - transaction costs
+  - capital gains tax
+  - India

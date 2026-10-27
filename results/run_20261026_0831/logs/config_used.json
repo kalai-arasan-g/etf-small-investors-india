@@ -1,0 +1,384 @@
+{
+  "study": {
+    "title": "Can Small Investors Diversify Efficiently? ETF-Based versus Direct-Equity Portfolios under Capital, Transaction-Cost and Tax Constraints in India",
+    "author": "",
+    "run_id": "20261026_0831",
+    "data_mode": "live",
+    "quick_run": false
+  },
+  "period": {
+    "start": "2015-01-01",
+    "end": "2026-09-30"
+  },
+  "etf_sleeves": {
+    "eq_large": {
+      "label": "Nifty 50",
+      "type": "eq_etf",
+      "candidates": [
+        "NIFTYBEES.NS",
+        "SETFNIF50.NS",
+        "NIFTYIETF.NS"
+      ],
+      "tri_index": "NIFTY 50",
+      "min_traded_value_cr": 0.5
+    },
+    "eq_next50": {
+      "label": "Nifty Next 50",
+      "type": "eq_etf",
+      "candidates": [
+        "JUNIORBEES.NS",
+        "SETFNN50.NS"
+      ],
+      "tri_index": "NIFTY NEXT 50",
+      "min_traded_value_cr": 0.2
+    },
+    "gold": {
+      "label": "Gold",
+      "type": "gold_etf",
+      "candidates": [
+        "GOLDBEES.NS",
+        "HDFCGOLD.NS",
+        "SETFGOLD.NS"
+      ],
+      "tri_index": null,
+      "min_traded_value_cr": 0.2
+    },
+    "debt": {
+      "label": "G-Sec",
+      "type": "debt_etf",
+      "candidates": [
+        "LTGILTBEES.NS",
+        "SETF10GILT.NS",
+        "LICNETFGSC.NS",
+        "GILT5YBEES.NS"
+      ],
+      "tri_index": null,
+      "min_traded_value_cr": 0.005
+    },
+    "intl": {
+      "label": "Nasdaq 100",
+      "type": "intl_etf",
+      "candidates": [
+        "MON100.NS",
+        "HNGSNGBEES.NS"
+      ],
+      "tri_index": null,
+      "min_traded_value_cr": 0.1
+    }
+  },
+  "etf_override": {},
+  "price_source": {
+    "debt": "nav"
+  },
+  "nav_search": {
+    "NIFTYBEES.NS": {
+      "query": "Nippon India ETF Nifty 50 BeES",
+      "must": [
+        "nifty 50",
+        "bees"
+      ]
+    },
+    "SETFNIF50.NS": {
+      "query": "SBI Nifty 50 ETF",
+      "must": [
+        "nifty 50",
+        "etf"
+      ]
+    },
+    "JUNIORBEES.NS": {
+      "query": "Nippon India ETF Nifty Next 50 Junior BeES",
+      "must": [
+        "next 50",
+        "bees"
+      ]
+    },
+    "SETFNN50.NS": {
+      "query": "SBI Nifty Next 50 ETF",
+      "must": [
+        "next 50",
+        "etf"
+      ]
+    },
+    "GOLDBEES.NS": {
+      "query": "Nippon India ETF Gold BeES",
+      "must": [
+        "gold",
+        "bees"
+      ]
+    },
+    "HDFCGOLD.NS": {
+      "query": "HDFC Gold ETF",
+      "must": [
+        "gold",
+        "etf"
+      ]
+    },
+    "SETFGOLD.NS": {
+      "query": "SBI Gold ETF",
+      "must": [
+        "gold",
+        "etf"
+      ]
+    },
+    "LTGILTBEES.NS": {
+      "query": "Nippon India ETF Nifty 8-13 yr G-Sec Long Term Gilt",
+      "must": [
+        "gilt"
+      ]
+    },
+    "SETF10GILT.NS": {
+      "query": "SBI Nifty 10 yr Benchmark G-Sec ETF",
+      "must": [
+        "g-sec",
+        "etf"
+      ]
+    },
+    "LICNETFGSC.NS": {
+      "query": "LIC MF Nifty 8-13 yr G-Sec ETF",
+      "must": [
+        "g-sec",
+        "etf"
+      ]
+    },
+    "GILT5YBEES.NS": {
+      "query": "Nippon India ETF Nifty 5 yr Benchmark G-Sec",
+      "must": [
+        "5 yr",
+        "g-sec"
+      ]
+    },
+    "MON100.NS": {
+      "query": "Motilal Oswal Nasdaq 100 ETF",
+      "must": [
+        "nasdaq 100",
+        "etf"
+      ]
+    },
+    "HNGSNGBEES.NS": {
+      "query": "Nippon India ETF Hang Seng BeES",
+      "must": [
+        "hang seng",
+        "bees"
+      ]
+    }
+  },
+  "risk_free": {
+    "fred_series": "INTGSTINM193N",
+    "fallback_liquid_fund": {
+      "query": "Nippon India Liquid Fund",
+      "must": [
+        "liquid",
+        "direct",
+        "growth"
+      ]
+    }
+  },
+  "clean_spikes": true,
+  "stocks": {
+    "large_cap_top_n": 100,
+    "top_n": 500,
+    "min_price": 10.0,
+    "lookback_months": 3,
+    "min_yahoo_coverage": 0.9,
+    "N_list": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "draws": 500,
+    "draws_grid": 100,
+    "seed": 2026
+  },
+  "backtest": {
+    "window": 36,
+    "rebalance": "A",
+    "weight_cap": 0.4,
+    "strategies": [
+      "EQ100",
+      "EQ_EW",
+      "EW",
+      "MinVar",
+      "MaxSharpe",
+      "RiskParity"
+    ],
+    "main_cov": "lw",
+    "cov_methods": [
+      "sample",
+      "lw",
+      "dcc"
+    ],
+    "gamma": 1.0
+  },
+  "labels": {
+    "EQ100": "Nifty 50 ETF only",
+    "EQ_EW": "Equity ETFs 1/N",
+    "EW": "1/N ETF",
+    "MinVar": "Min-variance ETF",
+    "MaxSharpe": "Max-Sharpe ETF",
+    "RiskParity": "Risk-parity ETF"
+  },
+  "investors": {
+    "lump": [
+      10000,
+      50000,
+      100000
+    ],
+    "sip": [
+      1000,
+      5000,
+      10000
+    ]
+  },
+  "main_investor": {
+    "mode": "sip",
+    "amount": 5000
+  },
+  "main_lump": {
+    "mode": "lump",
+    "amount": 50000
+  },
+  "brokers": [
+    "zero",
+    "flat"
+  ],
+  "main_broker": "zero",
+  "sip_single_order_brokers": [
+    "flat"
+  ],
+  "slabs": [
+    0.05,
+    0.2,
+    0.3
+  ],
+  "main_slab": 0.2,
+  "costs": {
+    "flat_fee": 20.0,
+    "stt": {
+      "stock": [
+        0.001,
+        0.001
+      ],
+      "eq_etf": [
+        0.0,
+        1e-05
+      ],
+      "gold_etf": [
+        0.0,
+        0.0
+      ],
+      "debt_etf": [
+        0.0,
+        0.0
+      ],
+      "intl_etf": [
+        0.0,
+        0.0
+      ]
+    },
+    "exchange": 2.97e-05,
+    "sebi": 1e-06,
+    "stamp_buy": 0.00015,
+    "gst": 0.18,
+    "dp_charge_per_sell": 15.93,
+    "half_spread": {
+      "stock": 0.001,
+      "eq_etf": 0.0005,
+      "gold_etf": 0.001,
+      "debt_etf": 0.0015,
+      "intl_etf": 0.002
+    },
+    "notes": {
+      "stt": "Delivery equity 0.1% buy and sell; equity ETF units 0.001% on sale only; non-equity ETFs nil. NSE: https://www.nseindia.com/static/invest/first-time-investor-sebi-turnover-fees-stt-other-levies",
+      "stamp_buy": "0.015% on delivery purchases, paid by buyer (Indian Stamp Act amendment, 1 July 2020). Source as above.",
+      "exchange": "NSE cash-market transaction charge 0.00297% (uniform rate). Verify on the NSE charges page before submission.",
+      "sebi": "SEBI turnover fee Rs 10 per crore.",
+      "gst": "18% on brokerage, exchange and SEBI fees.",
+      "dp_charge_per_sell": "Depository + broker DP charge per scrip per sell day, incl. GST (typical discount broker). Verify for the broker you describe.",
+      "flat_fee": "Rs 20 per executed order (typical discount broker intraday/F&O fee; several brokers charge it on delivery too).",
+      "half_spread": "Assumed half bid-ask spread; robustness adds 10/25/50 bps."
+    }
+  },
+  "tax": {
+    "regime": "current",
+    "cess": 0.04,
+    "eq_st_rate": 0.2,
+    "eq_lt_rate": 0.125,
+    "eq_lt_exemption": 125000.0,
+    "oth_lt_rate": 0.125,
+    "payment_month": 7,
+    "cii": {
+      "2014": 240,
+      "2015": 254,
+      "2016": 264,
+      "2017": 272,
+      "2018": 280,
+      "2019": 289,
+      "2020": 301,
+      "2021": 317,
+      "2022": 331,
+      "2023": 348,
+      "2024": 363,
+      "2025": 376
+    },
+    "notes": {
+      "equity": "Stocks and equity ETFs: STCG 20% (Sec 111A) if held <= 12 months; LTCG 12.5% above Rs 1.25 lakh per FY aggregate (Sec 112A). ClearTax: https://cleartax.in/s/how-are-etfs-taxed",
+      "gold_intl": "Gold and international ETFs: STCG at slab rate (<= 12 months); LTCG 12.5% without indexation, no Rs 1.25 lakh exemption. IIFL: https://www.iifl.com/blogs/gold-loan/gold-etf-tax-in-india-2026-post-finance-act-2024-rules",
+      "debt": "Debt ETFs bought on/after 1 April 2023: slab rate regardless of holding period (Sec 50AA). Finnovate: https://www.finnovate.in/learn/blog/etf-taxation-india",
+      "unchanged_2026": "Structure set by Finance (No.2) Act 2024 and unchanged in Budget 2026. https://finlecture.in/indian-tax-system/capital-gains-tax-fy-2026-27/",
+      "historical_regime": "Robustness only: equity LTCG exempt before 1-Apr-2018, 10% above Rs 1 lakh until 22-Jul-2024 with 31-Jan-2018 grandfathering; equity STCG 15% until 22-Jul-2024; non-equity LTCG 20% with indexation after 36 months for sales before 23-Jul-2024; Sec 50AA slab taxation for units bought from 1-Apr-2023 (gold/international until 31-Mar-2025). CII values should be verified against CBDT notifications.",
+      "simplifications": "Resident individual; 4% cess; no surcharge; tax paid each July from the portfolio; losses set off and carried forward; dividends ignored (growth ETFs)."
+    }
+  },
+  "tests": {
+    "bootstrap_M": 4999,
+    "stock_test_M": 999,
+    "block": 5,
+    "alpha": 0.05,
+    "seed": 42
+  },
+  "robustness": {
+    "windows": [
+      36,
+      48,
+      60
+    ],
+    "rebalance": [
+      "M",
+      "Q",
+      "A",
+      "T5"
+    ],
+    "extra_bps": [
+      10,
+      25,
+      50
+    ]
+  },
+  "subperiods": {
+    "Pre-COVID": [
+      "2015-01",
+      "2020-01"
+    ],
+    "COVID crash and recovery": [
+      "2020-02",
+      "2021-12"
+    ],
+    "2022 rate hikes": [
+      "2022-01",
+      "2022-12"
+    ],
+    "2023-2024": [
+      "2023-01",
+      "2024-12"
+    ],
+    "2025 tariff shock": [
+      "2025-01",
+      "2025-12"
+    ],
+    "2026 to date": [
+      "2026-01",
+      "2026-12"
+    ]
+  }
+}

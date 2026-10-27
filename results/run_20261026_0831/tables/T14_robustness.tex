@@ -1,0 +1,103 @@
+\begin{table}
+\caption{Robustness of ETF results (main SIP investor, net of costs and tax).}
+\label{tab:T14_robustness}
+\begin{tabular}{lllrrrrr}
+\toprule
+ &  &  & sharpe & ann\_return & max\_drawdown & xirr\_post\_tax & cost\_pct\_contrib \\
+check & variant & strategy &  &  &  &  &  \\
+\midrule
+\multirow[t]{9}{*}{covariance} & \multirow[t]{3}{*}{sample} & Min-variance ETF & 0.7449 & 0.1178 & -0.0594 & 0.1194 & 0.0066 \\
+ &  & Max-Sharpe ETF & 0.5763 & 0.1212 & -0.1436 & 0.1395 & 0.0098 \\
+ &  & Risk-parity ETF & 0.7977 & 0.1107 & -0.0557 & 0.1118 & 0.0068 \\
+\cline{2-8}
+ & \multirow[t]{3}{*}{lw} & Min-variance ETF & 0.7815 & 0.1215 & -0.0667 & 0.1247 & 0.0069 \\
+ &  & Max-Sharpe ETF & 0.6080 & 0.1330 & -0.1436 & 0.1523 & 0.0102 \\
+ &  & Risk-parity ETF & 0.8236 & 0.1296 & -0.0766 & 0.1345 & 0.0064 \\
+\cline{2-8}
+ & \multirow[t]{3}{*}{dcc} & Min-variance ETF & 0.8257 & 0.1249 & -0.0649 & 0.1308 & 0.0082 \\
+ &  & Max-Sharpe ETF & 0.7546 & 0.1492 & -0.1436 & 0.1751 & 0.0154 \\
+ &  & Risk-parity ETF & 0.7203 & 0.1048 & -0.0496 & 0.1023 & 0.0073 \\
+\cline{1-8} \cline{2-8}
+\multirow[t]{9}{*}{window (common start)} & \multirow[t]{3}{*}{36 months} & 1/N ETF & 0.9297 & 0.1675 & -0.0941 & 0.1608 & 0.0049 \\
+ &  & Min-variance ETF & 0.8213 & 0.1276 & -0.0670 & 0.1267 & 0.0063 \\
+ &  & Max-Sharpe ETF & 0.7468 & 0.1545 & -0.1223 & 0.1645 & 0.0083 \\
+\cline{2-8}
+ & \multirow[t]{3}{*}{48 months} & 1/N ETF & 0.9297 & 0.1675 & -0.0941 & 0.1608 & 0.0049 \\
+ &  & Min-variance ETF & 0.8560 & 0.1277 & -0.0611 & 0.1231 & 0.0057 \\
+ &  & Max-Sharpe ETF & 0.9816 & 0.1732 & -0.1036 & 0.1798 & 0.0082 \\
+\cline{2-8}
+ & \multirow[t]{3}{*}{60 months} & 1/N ETF & 0.9297 & 0.1675 & -0.0941 & 0.1608 & 0.0049 \\
+ &  & Min-variance ETF & 0.8810 & 0.1311 & -0.0592 & 0.1296 & 0.0057 \\
+ &  & Max-Sharpe ETF & 0.9174 & 0.1700 & -0.1108 & 0.1714 & 0.0085 \\
+\cline{1-8} \cline{2-8}
+\multirow[t]{8}{*}{rebalancing} & \multirow[t]{2}{*}{M} & 1/N ETF & 0.7945 & 0.1449 & -0.1090 & 0.1528 & 0.0092 \\
+ &  & Min-variance ETF & 0.7836 & 0.1197 & -0.0625 & 0.1201 & 0.0106 \\
+\cline{2-8}
+ & \multirow[t]{2}{*}{Q} & 1/N ETF & 0.8115 & 0.1471 & -0.1073 & 0.1550 & 0.0070 \\
+ &  & Min-variance ETF & 0.7860 & 0.1196 & -0.0649 & 0.1209 & 0.0085 \\
+\cline{2-8}
+ & \multirow[t]{2}{*}{A} & 1/N ETF & 0.8222 & 0.1488 & -0.1073 & 0.1564 & 0.0055 \\
+ &  & Min-variance ETF & 0.7815 & 0.1215 & -0.0667 & 0.1247 & 0.0069 \\
+\cline{2-8}
+ & \multirow[t]{2}{*}{5\% threshold} & 1/N ETF & 0.8216 & 0.1482 & -0.1073 & 0.1542 & 0.0048 \\
+ &  & Min-variance ETF & 0.8703 & 0.1254 & -0.0588 & 0.1262 & 0.0044 \\
+\cline{1-8} \cline{2-8}
+\multirow[t]{9}{*}{extra cost} & \multirow[t]{3}{*}{+10 bps} & Nifty 50 ETF only & 0.2976 & 0.0986 & -0.2881 & 0.0905 & 0.0041 \\
+ &  & 1/N ETF & 0.8157 & 0.1481 & -0.1075 & 0.1559 & 0.0091 \\
+ &  & Min-variance ETF & 0.7735 & 0.1208 & -0.0667 & 0.1240 & 0.0112 \\
+\cline{2-8}
+ & \multirow[t]{3}{*}{+25 bps} & Nifty 50 ETF only & 0.2924 & 0.0977 & -0.2884 & 0.0899 & 0.0079 \\
+ &  & 1/N ETF & 0.8065 & 0.1470 & -0.1075 & 0.1552 & 0.0146 \\
+ &  & Min-variance ETF & 0.7580 & 0.1195 & -0.0668 & 0.1231 & 0.0176 \\
+\cline{2-8}
+ & \multirow[t]{3}{*}{+50 bps} & Nifty 50 ETF only & 0.2837 & 0.0962 & -0.2885 & 0.0889 & 0.0141 \\
+ &  & 1/N ETF & 0.7925 & 0.1455 & -0.1076 & 0.1541 & 0.0237 \\
+ &  & Min-variance ETF & 0.7329 & 0.1175 & -0.0669 & 0.1215 & 0.0282 \\
+\cline{1-8} \cline{2-8}
+\multirow[t]{6}{*}{tax regime} & historical (date-dependent) & Nifty 50 ETF only & 0.3004 & 0.0992 & -0.2880 & 0.0909 & 0.0016 \\
+\cline{2-8}
+ & current FY2026-27 & Nifty 50 ETF only & 0.3004 & 0.0992 & -0.2880 & 0.0909 & 0.0016 \\
+\cline{2-8}
+ & historical (date-dependent) & 1/N ETF & 0.8218 & 0.1488 & -0.1073 & 0.1568 & 0.0055 \\
+\cline{2-8}
+ & current FY2026-27 & 1/N ETF & 0.8222 & 0.1488 & -0.1073 & 0.1564 & 0.0055 \\
+\cline{2-8}
+ & historical (date-dependent) & Min-variance ETF & 0.7760 & 0.1210 & -0.0667 & 0.1252 & 0.0070 \\
+\cline{2-8}
+ & current FY2026-27 & Min-variance ETF & 0.7815 & 0.1215 & -0.0667 & 0.1247 & 0.0069 \\
+\cline{1-8} \cline{2-8}
+\multirow[t]{3}{*}{brokerage} & \multirow[t]{3}{*}{Rs 20 flat per order} & Nifty 50 ETF only & 0.2848 & 0.0963 & -0.2884 & 0.0899 & 0.0063 \\
+ &  & 1/N ETF & 0.7705 & 0.1442 & -0.1032 & 0.1557 & 0.0128 \\
+ &  & Min-variance ETF & 0.7590 & 0.1215 & -0.0677 & 0.1253 & 0.0147 \\
+\cline{1-8} \cline{2-8}
+\multirow[t]{6}{*}{SIP order rule} & split across all holdings (main, zero brokerage) & 1/N ETF & 0.8222 & 0.1488 & -0.1073 & 0.1564 & 0.0055 \\
+\cline{2-8}
+ & one order per month (zero brokerage) & 1/N ETF & 0.8495 & 0.1526 & -0.1031 & 0.1579 & 0.0056 \\
+\cline{2-8}
+ & split across all holdings (main, zero brokerage) & Min-variance ETF & 0.7815 & 0.1215 & -0.0667 & 0.1247 & 0.0069 \\
+\cline{2-8}
+ & one order per month (zero brokerage) & Min-variance ETF & 0.8090 & 0.1259 & -0.0675 & 0.1275 & 0.0069 \\
+\cline{2-8}
+ & split across all holdings (main, zero brokerage) & Risk-parity ETF & 0.8236 & 0.1296 & -0.0766 & 0.1345 & 0.0064 \\
+\cline{2-8}
+ & one order per month (zero brokerage) & Risk-parity ETF & 0.8923 & 0.1372 & -0.0779 & 0.1370 & 0.0064 \\
+\cline{1-8} \cline{2-8}
+\multirow[t]{2}{*}{stock price cleaning} & cleaned (main) & Random 10 stocks (median) & 0.3205 & 0.1150 & -0.5868 & 0.1729 & 0.0125 \\
+\cline{2-8}
+ & raw, uncleaned & Random 10 stocks (median) & 0.3205 & 0.1150 & -0.5816 & 0.1729 & 0.0125 \\
+\cline{1-8} \cline{2-8}
+\multirow[t]{6}{*}{debt pricing} & market price (thin trading) & 1/N ETF & 0.8527 & 0.1533 & -0.0956 & 0.1579 & 0.0055 \\
+\cline{2-8}
+ & NAV (main) & 1/N ETF & 0.8222 & 0.1488 & -0.1073 & 0.1564 & 0.0055 \\
+\cline{2-8}
+ & market price (thin trading) & Min-variance ETF & 0.7991 & 0.1300 & -0.0750 & 0.1273 & 0.0069 \\
+\cline{2-8}
+ & NAV (main) & Min-variance ETF & 0.7815 & 0.1215 & -0.0667 & 0.1247 & 0.0069 \\
+\cline{2-8}
+ & market price (thin trading) & Risk-parity ETF & 0.8526 & 0.1375 & -0.0860 & 0.1371 & 0.0064 \\
+\cline{2-8}
+ & NAV (main) & Risk-parity ETF & 0.8236 & 0.1296 & -0.0766 & 0.1345 & 0.0064 \\
+\cline{1-8} \cline{2-8}
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,6 @@
+sleeve,label,ticker,type,available,first_date,last_date,median_daily_traded_value_cr_2y,passes_liquidity,candidate_order
+debt,G-Sec,LICNETFGSC.NS,debt_etf,True,2015-01-02,2026-09-30,0.1212116777795791,True,2
+eq_large,Nifty 50,NIFTYBEES.NS,eq_etf,True,2015-01-01,2026-09-30,159.4666083260559,True,0
+eq_next50,Nifty Next 50,JUNIORBEES.NS,eq_etf,True,2015-01-01,2026-09-30,24.60616761557007,True,0
+gold,Gold,GOLDBEES.NS,gold_etf,True,2015-01-01,2026-09-30,210.83862020783616,True,0
+intl,Nasdaq 100,MON100.NS,intl_etf,True,2015-01-01,2026-09-30,17.264230725,True,0

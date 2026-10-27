@@ -1,0 +1,20 @@
+\begin{table}
+\caption{Direct-equity universe built from NSE month-end bhavcopies (survivorship-bias free).}
+\label{tab:T04_stock_universe}
+\begin{tabular}{lr}
+\toprule
+ & value \\
+\midrule
+stocks ever eligible & 1939.0000 \\
+eligible at OOS start & 500.0000 \\
+delisted / stopped before end & 425.0000 \\
+share priced from Yahoo adj. close & 0.8881 \\
+split/bonus corrections (bhavcopy fallback) & 59.0000 \\
+monthly returns > +100\% (stock-months, raw) & 241.0000 \\
+monthly returns < -60\% (stock-months, raw) & 67.0000 \\
+spike-reversals fixed (|r|>50\% then reversal to within 20\%) & 116.0000 \\
+monthly returns > +100\% after cleaning & 234.0000 \\
+ETF daily bad ticks fixed (price + NAV) & 6.0000 \\
+\bottomrule
+\end{tabular}
+\end{table}

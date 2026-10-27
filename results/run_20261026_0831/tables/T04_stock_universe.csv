@@ -1,0 +1,11 @@
+,value
+stocks ever eligible,1939.0
+eligible at OOS start,500.0
+delisted / stopped before end,425.0
+share priced from Yahoo adj. close,0.8880866425992779
+split/bonus corrections (bhavcopy fallback),59.0
+"monthly returns > +100% (stock-months, raw)",241.0
+"monthly returns < -60% (stock-months, raw)",67.0
+spike-reversals fixed (|r|>50% then reversal to within 20%),116.0
+monthly returns > +100% after cleaning,234.0
+ETF daily bad ticks fixed (price + NAV),6.0
